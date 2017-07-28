@@ -7,14 +7,14 @@ using System.Runtime.InteropServices;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
 [assembly: AssemblyTitle("SlimCanvas")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Cross platform Canvas for Android, iOS and Windows")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("TWyTec")]
 [assembly: AssemblyProduct("SlimCanvas")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: NeutralResourcesLanguage("de")]
+[assembly: NeutralResourcesLanguage("")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //
