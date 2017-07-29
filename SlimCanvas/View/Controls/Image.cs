@@ -6,16 +6,29 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.View.Controls
 {
+    /// <summary>
+    /// to be added
+    /// </summary>
     public class Image : UIElement
     {
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Image()
         {
             _ClipProperty = new Propertys.ClipProperty(this);
         }
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.ClipProperty ClipProperty { get { return _ClipProperty; } }
 
         internal Propertys.ClipProperty _ClipProperty;
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Rect Clip
         {
             get { return (Rect)_ClipProperty.GetValue(); }
@@ -23,6 +36,10 @@ namespace SlimCanvas.View.Controls
         }
 
         Abstractions.IBitmap _iBitmap;
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Abstractions.IBitmap Source
         {
             get

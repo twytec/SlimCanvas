@@ -7,6 +7,9 @@ using SlimCanvas.View.Controls.EventTypes;
 
 namespace SlimCanvas.View.Controls.Animation
 {
+    /// <summary>
+    /// Animate
+    /// </summary>
     public class Animate : AnimateBase
     {
         private class AniModel
@@ -19,11 +22,26 @@ namespace SlimCanvas.View.Controls.Animation
 
         List<AniModel> myList;
 
+        /// <summary>
+        /// Create new double animation
+        /// </summary>
+        /// <param name="property"></param>
+        /// <param name="endValue"></param>
+        /// <param name="duration"></param>
+        /// <param name="met"></param>
+        /// <param name="endlessLoop"></param>
         public Animate(Propertys.BasicProperty property, double endValue, double duration, AnimateMethode met, bool endlessLoop)
             : this (new Dictionary<Propertys.BasicProperty, double>() { { property, endValue} }, duration, met, endlessLoop)
         {
         }
 
+        /// <summary>
+        /// Create new double animation
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="duration"></param>
+        /// <param name="met"></param>
+        /// <param name="endlessLoop"></param>
         public Animate(Dictionary<Propertys.BasicProperty, double> list, double duration, AnimateMethode met, bool endlessLoop)
         {
             myList = new List<AniModel>();
@@ -43,6 +61,10 @@ namespace SlimCanvas.View.Controls.Animation
             this.endlessLoop = endlessLoop;
         }
 
+        /// <summary>
+        /// Update interval
+        /// </summary>
+        /// <param name="e"></param>
         protected internal override void Update(RenderingEventArgs e)
         {
             base.Update(e);
@@ -65,6 +87,9 @@ namespace SlimCanvas.View.Controls.Animation
             }
         }
 
+        /// <summary>
+        /// Reset to start values
+        /// </summary>
         public override void Reset()
         {
             base.Reset();

@@ -18,7 +18,7 @@ namespace TestSamples.Scenarios
             canvas.AutoResize = true;
 
             string plattform = string.Empty;
-            switch (canvas.Plattform)
+            switch (canvas.Platform)
             {
                 case SlimCanvas.Plattform.UniversalWindowsDesktop:
                     plattform = "Windows 10 Desktop";

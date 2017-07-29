@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.Abstractions
 {
+    /// <summary>
+    /// Graphics interface
+    /// </summary>
     public interface IGraphics
     {
         /// <summary>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Battery</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Battery.CrossBattery">
+            <summary>
+            Cross platform Battery implemenations
+            </summary>
+        </member>
+        <member name="P:Plugin.Battery.CrossBattery.IsSupported">
+            <summary>
+            Gets if the plugin is supported on the current platform.
+            </summary>
+        </member>
+        <member name="P:Plugin.Battery.CrossBattery.Current">
+            <summary>
+            Current plugin implementation to use
+            </summary>
+        </member>
+        <member name="M:Plugin.Battery.CrossBattery.Dispose">
+            <summary>
+            Dispose of everything 
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SlimCanvas.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,10 +32,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\SlimCanvas.XML</DocumentationFile>
   </PropertyGroup>
-  <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\IAssets.cs" />
     <Compile Include="Abstractions\IBitmap.cs" />
@@ -47,12 +46,10 @@
     <Compile Include="IBitmap.cs" />
     <Compile Include="Keys.cs" />
     <Compile Include="Margin.cs" />
-    <Compile Include="Pen.cs" />
     <Compile Include="Plattform.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rect.cs" />
     <Compile Include="Size.cs" />
-    <Compile Include="Transform.cs" />
     <Compile Include="Vector2.cs" />
     <Compile Include="View\Brush.cs" />
     <Compile Include="View\Camera.cs" />
@@ -68,10 +65,8 @@
     <Compile Include="View\Controls\Collections\GlobalChildrenList.cs" />
     <Compile Include="View\Controls\EnumTypes\Alignment.cs" />
     <Compile Include="View\Controls\EnumTypes\DashStyle.cs" />
-    <Compile Include="View\Controls\EnumTypes\PropertyEnum.cs" />
     <Compile Include="View\Controls\EnumTypes\TextEnum.cs" />
     <Compile Include="View\Controls\EventTypes\DrawUpdateEvent.cs" />
-    <Compile Include="View\Controls\EventTypes\KeyRoutedEvent.cs" />
     <Compile Include="View\Controls\EventTypes\PointerRoutedEvent.cs" />
     <Compile Include="View\Controls\EventTypes\RenderingEvent.cs" />
     <Compile Include="View\Controls\EventTypes\SizeChangedEvent.cs" />

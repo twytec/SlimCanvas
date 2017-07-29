@@ -7,8 +7,14 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.View.Controls
 {
+    /// <summary>
+    /// to be added
+    /// </summary>
     public class UIElement : BasicElement, IDisposable
     {
+        /// <summary>
+        /// to be added
+        /// </summary>
         public UIElement()
         {
             _XProperty = new Propertys.XProperty(this);
@@ -34,17 +40,51 @@ namespace SlimCanvas.View.Controls
             SetActualSize();
         }
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public object Tag { get; set; }
 
         #region Propertys
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.XProperty XProperty { get { return _XProperty; } }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.YProperty YProperty { get { return _YProperty; } }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.RotationProperty RotationProperty { get { return _RotationProperty; } }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.OpacityProperty OpacityProperty { get { return _OpacityProperty; } }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.OriginProperty OriginProperty { get { return _OrginProperty; } }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.ScaleProperty ScaleProperty { get { return _ScaleProperty; } }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.ZProperty ZIndexProperty { get { return _ZProperty; } }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.ParentProperty ParentProperty { get { return _ParentProperty; } }
 
         #endregion
@@ -66,6 +106,9 @@ namespace SlimCanvas.View.Controls
         
         internal Propertys.ParentProperty _ParentProperty;
 
+        /// <summary>
+        /// The Parent of this child
+        /// </summary>
         public BasicElement Parent
         {
             get { return _ParentProperty.GetValue() as BasicElement; }
@@ -76,9 +119,15 @@ namespace SlimCanvas.View.Controls
 
         #region Horizontal Vertical Alignment Margin
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public EnumTypes.HorizontalAlignment HorizontalAlignment { get { return _horizontalAlignment; } set { _horizontalAlignment = value; SetActualSize(); } }
         EnumTypes.HorizontalAlignment _horizontalAlignment;
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public EnumTypes.VerticalAlignment VerticalAlignment { get { return _verticalAlignment; } set { _verticalAlignment = value; SetActualSize(); } }
         EnumTypes.VerticalAlignment _verticalAlignment;
 
@@ -91,9 +140,24 @@ namespace SlimCanvas.View.Controls
 
         #region Actual width, height, x and y
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public double ActualWidth { get; set; }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public double ActualHeight { get; set; }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public double ActualX { get; set; }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public double ActualY { get; set; }
         
         void InitActualSize()
@@ -174,11 +238,18 @@ namespace SlimCanvas.View.Controls
 
         #region X, Y
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public double X
         {
             get { return (double)_XProperty.GetValue(); }
             set { _XProperty.SetValue(value); SetActualSize(); }
         }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public double Y
         {
             get { return (double)_YProperty.GetValue(); }
@@ -226,13 +297,19 @@ namespace SlimCanvas.View.Controls
         }
 
         #endregion
-        
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public int ZIndex
         {
             get { return (int)_ZProperty.GetValue(); }
             set { _ZProperty.SetValue(value); }
         }
-        
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public void Dispose()
         {
             SizeChanged -= BasicElement_SizeChanged;

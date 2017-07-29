@@ -6,27 +6,109 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.View.Controls.Animation
 {
+    /// <summary>
+    /// AnimateMethode
+    /// </summary>
     public enum AnimateMethode
     {
+        /// <summary>
+        /// to be added
+        /// </summary>
         LinearTween,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseOutQuad,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseInOutQuad,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseInCubic,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseOutCubic,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseInOutCubic,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseOutQuart,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseInOutQuart,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseInQuint,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseOutQuint,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseInOutQuint,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseInSine,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseOutSine,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseInOutSine,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseInExpo,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseOutExpo,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseInOutExpo,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseInCirc,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseOutCirc,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         EaseInOutCirc
     }
 

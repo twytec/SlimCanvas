@@ -6,10 +6,24 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.View
 {
+    /// <summary>
+    /// View camera
+    /// </summary>
     public class Camera
     {
+        /// <summary>
+        /// Width
+        /// </summary>
         public double Width { get; set; }
+
+        /// <summary>
+        /// Height
+        /// </summary>
         public double Height { get; set; }
+
+        /// <summary>
+        /// X can not less than 0 and greater than Canvas.Width - Camera.Width
+        /// </summary>
         public double X
         {
             get { return _x; }
@@ -24,6 +38,10 @@ namespace SlimCanvas.View
                     _x = value;
             }
         }
+
+        /// <summary>
+        /// Y can not less than 0 and greater than Canvas.Height - Camera.Height
+        /// </summary>
         public double Y
         {
             get { return _y; }

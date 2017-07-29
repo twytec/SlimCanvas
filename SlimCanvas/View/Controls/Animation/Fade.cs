@@ -7,12 +7,23 @@ using SlimCanvas.View.Controls.EventTypes;
 
 namespace SlimCanvas.View.Controls.Animation
 {
+    /// <summary>
+    /// Fade opacity animation
+    /// </summary>
     public class Fade : AnimateBase
     {
         double startValue;
         double endValue;
         double endOpacity;
 
+        /// <summary>
+        /// Create new animation
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="endOpacity"></param>
+        /// <param name="duration"></param>
+        /// <param name="met"></param>
+        /// <param name="endlessLoop"></param>
         public Fade(UIElement element, double endOpacity, double duration, AnimateMethode met, bool endlessLoop = false)
         {
             startValue = element.Opacity;
@@ -24,6 +35,10 @@ namespace SlimCanvas.View.Controls.Animation
             this.endlessLoop = endlessLoop;
         }
 
+        /// <summary>
+        /// Update loop
+        /// </summary>
+        /// <param name="e"></param>
         protected internal override void Update(RenderingEventArgs e)
         {
             base.Update(e);
@@ -40,6 +55,9 @@ namespace SlimCanvas.View.Controls.Animation
             }
         }
 
+        /// <summary>
+        /// Reset to start values
+        /// </summary>
         public override void Reset()
         {
             base.Reset();

@@ -7,6 +7,9 @@ using SlimCanvas.View.Controls.EventTypes;
 
 namespace SlimCanvas.View.Controls.Animation
 {
+    /// <summary>
+    /// Move to animation
+    /// </summary>
     public class MoveTo : AnimateBase
     {
         double startX;
@@ -15,6 +18,13 @@ namespace SlimCanvas.View.Controls.Animation
         double endY;
         Vector2 to;
 
+        /// <summary>
+        /// Create new animation
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="to"></param>
+        /// <param name="duration"></param>
+        /// <param name="met"></param>
         public MoveTo(UIElement element, Vector2 to, double duration, AnimateMethode met)
         {
             startX = element.X;
@@ -27,6 +37,10 @@ namespace SlimCanvas.View.Controls.Animation
             this.met = met;
         }
 
+        /// <summary>
+        /// Update loop
+        /// </summary>
+        /// <param name="e"></param>
         protected internal override void Update(RenderingEventArgs e)
         {
             base.Update(e);
@@ -44,6 +58,9 @@ namespace SlimCanvas.View.Controls.Animation
             }
         }
 
+        /// <summary>
+        /// Reset to start values
+        /// </summary>
         public override void Reset()
         {
             base.Reset();

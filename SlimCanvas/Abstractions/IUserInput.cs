@@ -7,16 +7,30 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.Abstractions
 {
+    /// <summary>
+    /// Only internal interfache
+    /// </summary>
     public interface IUserInput
     {
+        /// <summary>
+        /// Only internal interfache
+        /// </summary>
         event PointerRoutedEventHandler PointerPressed;
+
+        /// <summary>
+        /// Only internal interfache
+        /// </summary>
         event PointerRoutedEventHandler PointerMoved;
+
+        /// <summary>
+        /// Only internal interfache
+        /// </summary>
         event PointerRoutedEventHandler PointerReleased;
 
         //Only Windows with Mouse
+        /// <summary>
+        /// Only internal interfache
+        /// </summary>
         event PointerRoutedEventHandler RightTapped;
-
-        //event KeyRoutedEventHandler KeyDown;
-        //event KeyRoutedEventHandler KeyUp;
     }
 }

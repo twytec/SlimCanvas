@@ -6,20 +6,41 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas
 {
+    /// <summary>
+    /// Cross platform Canvas
+    /// </summary>
     public class Canvas : View.Controls.BasicElement
     {
         internal static Canvas MyCanvas;
         internal static View.Draw ViewDraw;
         internal static View.Controls.Collections.GlobalChildrenList GlobalChildrenList;
 
-        
-        public Plattform Plattform { get; set; }
+        /// <summary>
+        /// Get aculate platform
+        /// </summary>
+        public Plattform Platform { get; set; }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public View.Camera Camera { get; private set; }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Abstractions.IAssets Assets { get; private set; }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Abstractions.IGraphics Graphics { get; private set; }
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public View.Brush Background { get { return _backgroundBrush; } set { _backgroundBrush = value; BackroundRect.FillBrush = value; } }
-        View.Brush _backgroundBrush = View.SolidColorBrush.White;
+
+        View.Brush _backgroundBrush = new View.SolidColorBrush(Color.White);
         internal View.Controls.Primitive.Rectangle BackroundRect;
 
         /// <summary>
@@ -27,7 +48,14 @@ namespace SlimCanvas
         /// </summary>
         public bool AutoResize { get; set; } = true;
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public event View.Controls.EventTypes.RenderingEventHandler Rendering;
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         protected virtual void OnRendering(View.Controls.EventTypes.RenderingEventArgs e)
         {
             Rendering?.Invoke(this, e);
@@ -42,7 +70,10 @@ namespace SlimCanvas
 
             OnRendering(e);
         }
-        
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Canvas(Abstractions.ISlimDraw iDraw, Abstractions.IUserInput iInput, Abstractions.IAssets assets, Abstractions.IGraphics graphics)
         {
             MyCanvas = this;
@@ -97,11 +128,15 @@ namespace SlimCanvas
             OnSizeChanged(e);
         }
 
+        /// <summary>
+        /// Clear canvas
+        /// </summary>
         public void Clear()
         {
-            
+            Camera.X = 0;
+            Camera.Y = 0;
             Children.Clear();
-            Background = View.SolidColorBrush.White;
+            Background = new View.SolidColorBrush(Color.White);
         }
     }
 }

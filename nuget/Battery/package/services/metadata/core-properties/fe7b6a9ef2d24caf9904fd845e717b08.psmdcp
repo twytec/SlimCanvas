@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties">
+  <dc:creator>James Montemagno</dc:creator>
+  <dc:description>Subscribe to battery change notifications across iOS, Android, Windows Phone, and Windows from a single API. 
+         
+         Ability to gather current battery level, charging status, and charging type.</dc:description>
+  <dc:identifier>Xam.Plugin.Battery</dc:identifier>
+  <version>3.0.1</version>
+  <keywords>xamarin, pcl, xam.pcl, battery, windows phone, winphone, wp8, winrt, android, xamarin.forms, ios</keywords>
+  <lastModifiedBy>NuGet, Version=4.1.0.2450, Culture=neutral, PublicKeyToken=31bf3856ad364e35;Microsoft Windows NT 6.2.9200.0;.NET Framework 4.5</lastModifiedBy>
+</coreProperties>

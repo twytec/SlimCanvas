@@ -6,29 +6,47 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.View.Controls.Primitive
 {
+    /// <summary>
+    /// to be added
+    /// </summary>
     public class Line : BasicPrimitive
     {
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.EndPointProperty EndPointProperty { get { return _EndPointProperty; } }
         internal Propertys.EndPointProperty _EndPointProperty;
-        
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Vector2 EndPoint
         {
             get { return (Vector2)_EndPointProperty.GetValue(); }
             set { _EndPointProperty.SetValue(value); }
         }
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Line()
             : this (new Vector2(), new Vector2())
         {
 
         }
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Line(Vector2 startPoint, Vector2 endPoint)
             : this (startPoint, endPoint, Color.Black, 1)
         {
 
         }
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Line(Vector2 startPoint, Vector2 endPoint, Color strokeColor, double thickness)
         {
             _EndPointProperty = new Propertys.EndPointProperty(this);

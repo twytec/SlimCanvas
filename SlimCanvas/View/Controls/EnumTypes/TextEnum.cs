@@ -6,39 +6,40 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.View.Controls.EnumTypes
 {
-    public enum FlowDirection
-    {
-        BottomToTop,
-        TopToBottom,
-        LeftToRight,
-        RightToLeft
-    }
-
-    public enum FontStretch
-    {
-        Undefined,
-        UltraCondensed,
-        ExtraCondensed,
-        Condensed,
-        SemiCondensed,
-        Normal,
-        SemiExpanded,
-        Expanded,
-        ExtraExpanded,
-        UltraExpanded
-    }
-    
-
+    /// <summary>
+    /// to be added
+    /// </summary>
     public enum FontStyle
     {
+        /// <summary>
+        /// to be added
+        /// </summary>
         Normal,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         Italic
     }
 
+    /// <summary>
+    /// to be added
+    /// </summary>
     public enum TextAlignment
     {
+        /// <summary>
+        /// to be added
+        /// </summary>
         Left,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         Right,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         Center
     }
 }

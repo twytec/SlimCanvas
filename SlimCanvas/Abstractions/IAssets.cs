@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.Abstractions
 {
+    /// <summary>
+    /// Interface to Assets an local folder
+    /// </summary>
     public interface IAssets
     {
         #region Temp
@@ -58,7 +61,8 @@ namespace SlimCanvas.Abstractions
         /// On Android is context.ApplicationInfo.DataDir
         /// On iOS is NSBundle.MainBundle.BundlePath
         /// </summary>
-        /// <param name="filePath"></param>
+        /// <param name="fileName"></param>
+        /// <param name="stream"></param>
         /// <returns></returns>
         Task SaveFileToLocalFolderAsync(string fileName, System.IO.Stream stream);
 

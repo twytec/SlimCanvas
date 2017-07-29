@@ -6,11 +6,29 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.View.Controls.EnumTypes
 {
+    /// <summary>
+    /// to be added
+    /// </summary>
     public enum DashStyle
     {
+        /// <summary>
+        /// to be added
+        /// </summary>
         Solid,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         Dash,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         Dot,
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         DashDotDot,
 
         /// <summary>

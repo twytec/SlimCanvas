@@ -7,8 +7,14 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.View.Controls
 {
+    /// <summary>
+    /// BasicElement
+    /// </summary>
     public class BasicElement
     {
+        /// <summary>
+        /// BasicElement
+        /// </summary>
         public BasicElement()
         {
             _HeightProperty = new Propertys.HeightProperty(this);
@@ -28,7 +34,14 @@ namespace SlimCanvas.View.Controls
             Children = new Collections.ChildrenCollection(Id, this);
         }
 
+        /// <summary>
+        /// HeightProperty
+        /// </summary>
         public Propertys.HeightProperty HeightProperty { get { return _HeightProperty; } }
+
+        /// <summary>
+        /// WidthProperty
+        /// </summary>
         public Propertys.WidthProperty WidthProperty { get { return _WidthProperty; } }
 
         #region internal
@@ -45,11 +58,18 @@ namespace SlimCanvas.View.Controls
         internal Propertys.WidthProperty _WidthProperty;
         internal Propertys.HeightProperty _HeightProperty;
 
+        /// <summary>
+        /// Width
+        /// </summary>
         public double Width
         {
             get { return (double)_WidthProperty.GetValue(); }
             set { _WidthProperty.SetValue(value); SizeChangedTrigger(); }
         }
+
+        /// <summary>
+        /// Height
+        /// </summary>
         public double Height
         {
             get { return (double)_HeightProperty.GetValue(); }
@@ -60,6 +80,9 @@ namespace SlimCanvas.View.Controls
         
         #region Children
 
+        /// <summary>
+        /// Get or set child elements to parent
+        /// </summary>
         public Collections.ChildrenCollection Children { get; set; }
 
         #endregion
@@ -68,7 +91,14 @@ namespace SlimCanvas.View.Controls
 
         #region PointerMoved
 
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         public event PointerRoutedEventHandler PointerMoved;
+
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         protected virtual void OnPointerMoved(PointerRoutedEventArgs e)
         {
             PointerMoved?.Invoke(this, e);
@@ -82,7 +112,14 @@ namespace SlimCanvas.View.Controls
 
         #region Entered
 
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         public event PointerRoutedEventHandler PointerEntered;
+
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         protected virtual void OnPointerEntered(PointerRoutedEventArgs e)
         {
             PointerEntered?.Invoke(this, e);
@@ -96,7 +133,14 @@ namespace SlimCanvas.View.Controls
 
         #region Exited
 
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         public event PointerRoutedEventHandler PointerExited;
+
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         protected virtual void OnPointerExited(PointerRoutedEventArgs e)
         {
             PointerExited?.Invoke(this, e);
@@ -110,7 +154,14 @@ namespace SlimCanvas.View.Controls
 
         #region Pressed
 
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         public event PointerRoutedEventHandler PointerPressed;
+
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         protected virtual void OnPointerPressed(PointerRoutedEventArgs e)
         {
             PointerPressed?.Invoke(this, e);
@@ -124,7 +175,14 @@ namespace SlimCanvas.View.Controls
 
         #region PointerReleased
 
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         public event PointerRoutedEventHandler PointerReleased;
+
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         protected virtual void OnPointerReleased(PointerRoutedEventArgs e)
         {
             PointerReleased?.Invoke(this, e);
@@ -138,7 +196,14 @@ namespace SlimCanvas.View.Controls
 
         #region Tapped
 
+        /// <summary>
+        /// Tapped/Click. Routed event for mouse, touch, pen
+        /// </summary>
         public event PointerRoutedEventHandler Tapped;
+
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         protected virtual void OnTapped(PointerRoutedEventArgs e)
         {
             Tapped?.Invoke(this, e);
@@ -152,7 +217,14 @@ namespace SlimCanvas.View.Controls
 
         #region RightTapped
 
+        /// <summary>
+        /// Tapped/Click. Routed event for mouse, touch, pen
+        /// </summary>
         public event PointerRoutedEventHandler RightTapped;
+
+        /// <summary>
+        /// Tapped/Click. Routed event for mouse, touch, pen
+        /// </summary>
         protected virtual void OnRightTapped(PointerRoutedEventArgs e)
         {
             RightTapped?.Invoke(this, e);
@@ -166,7 +238,14 @@ namespace SlimCanvas.View.Controls
 
         #region SwipeLeft
 
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         public event PointerRoutedEventHandler SwipeLeft;
+
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         protected virtual void OnSwipeLeft(PointerRoutedEventArgs e)
         {
             SwipeLeft?.Invoke(this, e);
@@ -180,7 +259,14 @@ namespace SlimCanvas.View.Controls
 
         #region SwipeRight
 
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         public event PointerRoutedEventHandler SwipeRight;
+
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         protected virtual void OnSwipeRight(PointerRoutedEventArgs e)
         {
             SwipeRight?.Invoke(this, e);
@@ -194,7 +280,14 @@ namespace SlimCanvas.View.Controls
 
         #region SwipeTop
 
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         public event PointerRoutedEventHandler SwipeTop;
+
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         protected virtual void OnSwipeTop(PointerRoutedEventArgs e)
         {
             SwipeTop?.Invoke(this, e);
@@ -208,7 +301,14 @@ namespace SlimCanvas.View.Controls
 
         #region SwipeBottom
 
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         public event PointerRoutedEventHandler SwipeBottom;
+
+        /// <summary>
+        /// Routed event for mouse, touch, pen
+        /// </summary>
         protected virtual void OnSwipeBottom(PointerRoutedEventArgs e)
         {
             SwipeBottom?.Invoke(this, e);
@@ -222,7 +322,14 @@ namespace SlimCanvas.View.Controls
 
         #region SizeChanged
 
+        /// <summary>
+        /// Occurs when either the ActualHeight or the ActualWidth property changes 
+        /// </summary>
         public event SizeChangedEventHandler SizeChanged;
+
+        /// <summary>
+        /// Occurs when either the ActualHeight or the ActualWidth property changes 
+        /// </summary>
         protected virtual void OnSizeChanged(SizeChangedEventArgs e)
         {
             SizeChanged?.Invoke(this, e);

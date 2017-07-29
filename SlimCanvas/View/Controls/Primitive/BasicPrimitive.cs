@@ -7,13 +7,31 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.View.Controls.Primitive
 {
+    /// <summary>
+    /// to be added
+    /// </summary>
     public class BasicPrimitive : UIElement
     {
         #region Get
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.StrokeColorProperty StrokeColorProperty { get { return _StrokeColorProperty; } }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.ThicknessProperty ThicknessProperty { get { return _ThicknessProperty; } }
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.StrokeStyleProperty StrokeStyleProperty { get { return _StrokeStyleProperty; } }
+        
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Propertys.DashPatternProperty DashPatternProperty { get { return _DashPatternProperty; } }
 
         #endregion
@@ -23,6 +41,9 @@ namespace SlimCanvas.View.Controls.Primitive
         internal Propertys.StrokeStyleProperty _StrokeStyleProperty;
         internal Propertys.DashPatternProperty _DashPatternProperty;
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public BasicPrimitive()
         {
             _StrokeColorProperty = new Propertys.StrokeColorProperty(this);
@@ -31,12 +52,18 @@ namespace SlimCanvas.View.Controls.Primitive
             _DashPatternProperty = new Propertys.DashPatternProperty(this);
         }
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public Color StrokeColor
         {
             get { return (Color)_StrokeColorProperty.GetValue(); }
             set { _StrokeColorProperty.SetValue(value); }
         }
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public DashStyle StrokeStyle
         {
             get { return (DashStyle)_StrokeStyleProperty.GetValue(); }
@@ -52,6 +79,9 @@ namespace SlimCanvas.View.Controls.Primitive
             set { _DashPatternProperty.SetValue(value); }
         }
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public double Thickness
         {
             get { return (double)_ThicknessProperty.GetValue(); }

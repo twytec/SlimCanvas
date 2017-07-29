@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.Droid
 {
-    public class IBitmapDroid : Abstractions.IBitmap
+    internal class IBitmapDroid : Abstractions.IBitmap
     {
         public int Width { get; private set; }
         public int Height { get; private set; }

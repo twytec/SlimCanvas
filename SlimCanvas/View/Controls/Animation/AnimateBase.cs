@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.View.Controls.Animation
 {
+    /// <summary>
+    /// AnimateBase
+    /// </summary>
     public abstract class AnimateBase
     {
         internal double duration;
@@ -16,7 +19,14 @@ namespace SlimCanvas.View.Controls.Animation
 
         System.Threading.EventWaitHandle waitHandle;
 
+        /// <summary>
+        /// Event to antmation finish
+        /// </summary>
         public event EventHandler AnimationFinish;
+
+        /// <summary>
+        /// Animation finish trigger
+        /// </summary>
         protected virtual void OnAnimationFinish()
         {
             if (endlessLoop)
@@ -30,11 +40,18 @@ namespace SlimCanvas.View.Controls.Animation
             }
         }
 
+        /// <summary>
+        /// Start animation
+        /// </summary>
         public void Start()
         {
             Canvas.MyCanvas.Rendering += MyCanvas_Rendering;
         }
 
+        /// <summary>
+        /// Start animation an await for finish
+        /// </summary>
+        /// <returns></returns>
         public async Task StartAsync()
         {
             Canvas.MyCanvas.Rendering += MyCanvas_Rendering;
@@ -47,6 +64,9 @@ namespace SlimCanvas.View.Controls.Animation
 
         }
 
+        /// <summary>
+        /// Stop animation
+        /// </summary>
         public void Stop()
         {
             Canvas.MyCanvas.Rendering -= MyCanvas_Rendering;
@@ -59,11 +79,18 @@ namespace SlimCanvas.View.Controls.Animation
             Update(e);
         }
 
+        /// <summary>
+        /// Update loop
+        /// </summary>
+        /// <param name="e"></param>
         internal protected virtual void Update(EventTypes.RenderingEventArgs e)
         {
             
         }
 
+        /// <summary>
+        /// Reset to start value
+        /// </summary>
         public virtual void Reset()
         {
             durationSteps = 0;

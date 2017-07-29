@@ -7,6 +7,9 @@ using SlimCanvas.View.Controls.EventTypes;
 
 namespace SlimCanvas.View.Controls.Animation
 {
+    /// <summary>
+    /// Rotate animation
+    /// </summary>
     public class Rotate : AnimateBase
     {
         double startValue;
@@ -16,6 +19,14 @@ namespace SlimCanvas.View.Controls.Animation
         bool rotatePerSecond = false;
         bool backward = false;
         
+        /// <summary>
+        /// Create new rotate animation
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="degress"></param>
+        /// <param name="duration"></param>
+        /// <param name="met"></param>
+        /// <param name="endlessLoop"></param>
         public Rotate(UIElement element, double degress, double duration, AnimateMethode met, bool endlessLoop = false)
         {
             startValue = element.Rotation;
@@ -30,8 +41,9 @@ namespace SlimCanvas.View.Controls.Animation
         /// <summary>
         /// Rotation animation loop
         /// </summary>
-        /// <param name="element">BasicElement</param>
-        /// <param name="dps">Degress per second</param>
+        /// <param name="element"></param>
+        /// <param name="dps">degress to second</param>
+        /// <param name="backward">backward clockwise</param>
         public Rotate(UIElement element, double dps, bool backward = false)
         {
             this.basicElement = element;
@@ -40,6 +52,10 @@ namespace SlimCanvas.View.Controls.Animation
             this.backward = backward;
         }
 
+        /// <summary>
+        /// Update loop
+        /// </summary>
+        /// <param name="e"></param>
         protected internal override void Update(RenderingEventArgs e)
         {
             base.Update(e);
@@ -67,6 +83,9 @@ namespace SlimCanvas.View.Controls.Animation
             
         }
 
+        /// <summary>
+        /// Reset to start values
+        /// </summary>
         public override void Reset()
         {
             base.Reset();

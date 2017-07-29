@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.View.Controls.Propertys
 {
+    /// <summary>
+    /// to be added
+    /// </summary>
     public class BasicProperty : IProperty
     {
         BasicElement myElement;
@@ -16,7 +19,14 @@ namespace SlimCanvas.View.Controls.Propertys
 
         internal object myValue;
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public event EventHandler PropertyChanged;
+
+        /// <summary>
+        /// to be added
+        /// </summary>
         protected virtual void OnPropertyChanged(EventArgs e)
         {
             PropertyChanged?.Invoke(null, e);
@@ -26,11 +36,17 @@ namespace SlimCanvas.View.Controls.Propertys
             OnPropertyChanged(null);
         }
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public object GetValue()
         {
             return myValue;
         }
 
+        /// <summary>
+        /// to be added
+        /// </summary>
         public void SetValue(object value)
         {
             myValue = value;

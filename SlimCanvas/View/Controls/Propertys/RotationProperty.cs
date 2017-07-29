@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SlimCanvas.View.Controls.Propertys
 {
+    /// <summary>
+    /// to be added
+    /// </summary>
     public class RotationProperty : BasicProperty
     {
         /// <summary>
