@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
-  <Relationship Type="http://schemas.microsoft.com/packaging/2010/07/manifest" Target="/Xam.Plugin.Battery.nuspec" Id="Rea7b6227e6004dda" />
-  <Relationship Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="/package/services/metadata/core-properties/fe7b6a9ef2d24caf9904fd845e717b08.psmdcp" Id="R19a6e91b933744f9" />
-</Relationships>
