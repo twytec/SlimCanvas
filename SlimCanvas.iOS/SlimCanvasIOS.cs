@@ -15,7 +15,7 @@ using CoreText;
 namespace SlimCanvas.iOS
 {
     /// <summary>
-    /// Create new Canvas on UWP
+    /// Create new Canvas on iOS
     /// </summary>
     public class SlimCanvasIOS : UIView
     {
@@ -29,7 +29,7 @@ namespace SlimCanvas.iOS
         IUserInput uInput;
 
         /// <summary>
-        /// Create new Canvas on UWP
+        /// Create new Canvas on iOS
         /// </summary>
         public SlimCanvasIOS()
         {
@@ -75,7 +75,7 @@ namespace SlimCanvas.iOS
         {
             base.TouchesMoved(touches, evt);
 
-            uInput.TouchesBegan(touches, evt);
+            uInput.TouchesMoved(touches, evt);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace SlimCanvas.iOS
         {
             base.TouchesEnded(touches, evt);
 
-            uInput.TouchesBegan(touches, evt);
+            uInput.TouchesEnded(touches, evt);
         }
 
         #endregion

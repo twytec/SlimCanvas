@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SlimCanvas;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -29,7 +30,7 @@ namespace TestSamples.Scenarios
                 Height = 200,
                 X = 100,
                 Y = 50,
-                FillBrush = SlimCanvas.View.SolidColorBrush.Brown,
+                FillBrush = new SlimCanvas.View.SolidColorBrush(Color.Brown),
                 Thickness = 5,
                 StrokeColor = SlimCanvas.Color.Chartreuse,
                 StrokeStyle = SlimCanvas.View.Controls.EnumTypes.DashStyle.Dot

@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 namespace SlimCanvas.Droid
 {
     /// <summary>
-    /// Create new Canvas on UWP
+    /// Create new Canvas on Android
     /// </summary>
     public class SlimCanvasDroid : SurfaceView, ISurfaceHolderCallback
     {
@@ -32,7 +32,7 @@ namespace SlimCanvas.Droid
         DrawInCanvas drawInCanvas;
 
         /// <summary>
-        /// Create new Canvas on UWP
+        /// Create new Canvas on Android
         /// </summary>
         public SlimCanvasDroid(Context context) : base(context)
         {

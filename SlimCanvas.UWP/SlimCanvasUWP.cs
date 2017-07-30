@@ -31,9 +31,8 @@ namespace SlimCanvas.UWP
             SlimCanvasPCL = new Canvas(new DrawInCanvas(this), input, new IAssetsUwp(), new IGraphicsUwp());
 
             SetPlattformSettings();
-            
         }
-
+        
         #region SetPlattformSettings
 
         void SetPlattformSettings()

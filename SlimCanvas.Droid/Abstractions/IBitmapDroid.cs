@@ -56,7 +56,7 @@ namespace SlimCanvas.Droid
                 var r = Android.Graphics.Color.GetRedComponent(c);
                 var g = Android.Graphics.Color.GetGreenComponent(c);
                 var b = Android.Graphics.Color.GetBlueComponent(c);
-
+                
                 pixels[cIndex] = (byte)r;
                 pixels[cIndex + 1] = (byte)g;
                 pixels[cIndex + 2] = (byte)b;
@@ -161,7 +161,8 @@ namespace SlimCanvas.Droid
         public static Abstractions.IBitmap CreateImage(byte[] colors, int width)
         {
             var pixel = FromRgbaToArgb(colors);
-            var bitmap = Android.Graphics.Bitmap.CreateBitmap(pixel, width, (int)(colors.Length / width), Android.Graphics.Bitmap.Config.Argb8888);
+            
+            var bitmap = Android.Graphics.Bitmap.CreateBitmap(pixel, width, (int)(colors.Length / 4 / width), Android.Graphics.Bitmap.Config.Argb8888);
 
             if (bitmap == null)
             {
@@ -177,14 +178,17 @@ namespace SlimCanvas.Droid
 
         static int[] FromRgbaToArgb(byte[] colors)
         {
-            int[] pi = new int[colors.Length];
+            int[] pi = new int[colors.Length / 4];
+            int pIndex = 0;
             for (int i = 0; i < colors.Length; i += 4)
             {
-                //From RGBA to ARGB
-                pi[i] = colors[i + 3];
-                pi[i + 1] = colors[i];
-                pi[i + 2] = colors[i + 1];
-                pi[i + 3] = colors[i + 2];
+                var r = colors[i];
+                var g = colors[i + 1];
+                var b = colors[i + 2];
+                var a = colors[i + 3];
+                
+                pi[pIndex] = Android.Graphics.Color.Argb(a, r, g, b);
+                pIndex++;
             }
 
             return pi;

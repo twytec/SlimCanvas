@@ -44,8 +44,8 @@ namespace SlimCanvas.View
             }
             else if (updateLoops == maxIdleUpdateLoops)
             {
-                updateLoops = 0;
-                //myDraw.Pause();
+                //updateLoops = 0;
+                myDraw.Pause();
             }
 
             lastState = e.Time;

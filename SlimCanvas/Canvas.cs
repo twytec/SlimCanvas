@@ -135,6 +135,8 @@ namespace SlimCanvas
         {
             Camera.X = 0;
             Camera.Y = 0;
+            Width = Camera.Width;
+            Height = Camera.Height;
             Children.Clear();
             Background = new View.SolidColorBrush(Color.White);
         }

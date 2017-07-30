@@ -11,22 +11,8 @@ namespace SlimCanvas.UWP
         public static Size GetSize(double width, double height)
         {
             var display = Windows.Graphics.Display.DisplayInformation.GetForCurrentView();
-
-            double w = 0;
-            double h = 0;
-
-            if (display.CurrentOrientation == Windows.Graphics.Display.DisplayOrientations.Landscape || display.CurrentOrientation == Windows.Graphics.Display.DisplayOrientations.LandscapeFlipped)
-            {
-                w = width;
-                h = height;
-            }
-            else if (display.CurrentOrientation == Windows.Graphics.Display.DisplayOrientations.Portrait || display.CurrentOrientation == Windows.Graphics.Display.DisplayOrientations.PortraitFlipped)
-            {
-                h = width;
-                w = height;
-            }
-
-            return new Size(w * display.RawPixelsPerViewPixel, h * display.RawPixelsPerViewPixel);
+            
+            return new Size(width, height);
         }
 
         public static SharpDX.Color ToColor(Color color)

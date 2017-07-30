@@ -36,7 +36,7 @@ namespace TestSamples.Scenarios
             {
                 Width = 300,
                 Height = 300,
-                FillBrush = SlimCanvas.View.SolidColorBrush.White,
+                FillBrush = new SlimCanvas.View.SolidColorBrush(Color.White),
                 X = 350,
                 Y = 100
             };
@@ -112,13 +112,13 @@ namespace TestSamples.Scenarios
 
         private void Ellipse_PointerEntered(object sender, SlimCanvas.View.Controls.EventTypes.PointerRoutedEventArgs e)
         {
-            rect.FillBrush = SlimCanvas.View.SolidColorBrush.Brown;
+            rect.FillBrush = new SlimCanvas.View.SolidColorBrush(Color.Brown);
             tb.Color = Color.White;
         }
 
         private void Ellipse_PointerExited(object sender, SlimCanvas.View.Controls.EventTypes.PointerRoutedEventArgs e)
         {
-            rect.FillBrush = SlimCanvas.View.SolidColorBrush.White;
+            rect.FillBrush = new SlimCanvas.View.SolidColorBrush(Color.White);
             tb.Color = Color.Black;
         }
 

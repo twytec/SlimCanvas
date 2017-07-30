@@ -77,15 +77,10 @@ namespace SlimCanvas.UWP
         void CreateDeviceAndLoadContent()
         {
             var creationFlags = SharpDX.Direct3D11.DeviceCreationFlags.BgraSupport;
-#if DEBUG
-
-            creationFlags |= SharpDX.Direct3D11.DeviceCreationFlags.Debug;
-#endif
             
             using (var dd = new SharpDX.Direct3D11.Device(SharpDX.Direct3D.DriverType.Hardware, creationFlags))
             {
                 d3dDevice = dd.QueryInterface<SharpDX.Direct3D11.Device2>();
-
             }
             d3dDeviceContext = d3dDevice.ImmediateContext2;
 

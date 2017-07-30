@@ -45,7 +45,6 @@ namespace TestSamples.Scenarios
                 canvas.Children.Add(clipImg);
 
                 var pixel = bitmap.GetPixels();
-
                 var bitmap2 = await canvas.Graphics.BitmapAsync(pixel, bitmap.Width);
 
                 //Crop
@@ -67,34 +66,34 @@ namespace TestSamples.Scenarios
                 
             }
 
-            using (var logoFile2 = await canvas.Assets.GetFileFromAssetsAsync("TWyTecLogo600x300.png"))
-            {
-                string fileName = $"{Guid.NewGuid().ToString()}.png";
+            //using (var logoFile2 = await canvas.Assets.GetFileFromAssetsAsync("TWyTecLogo600x300.png"))
+            //{
+            //    string fileName = $"{Guid.NewGuid().ToString()}.png";
 
-                await canvas.Assets.SaveFileToLocalFolderAsync(fileName, logoFile2);
-                await canvas.Assets.SaveFileToTempAsync(fileName, logoFile2);
+            //    await canvas.Assets.SaveFileToLocalFolderAsync(fileName, logoFile2);
+            //    await canvas.Assets.SaveFileToTempAsync(fileName, logoFile2);
 
-                using (var myStream = await canvas.Assets.GetFileFromLocalFolderAsync(fileName))
-                {
-                    canvas.Children.Add(
-                        new SlimCanvas.View.Controls.Image()
-                        {
-                            VerticalAlignment = SlimCanvas.View.Controls.EnumTypes.VerticalAlignment.Bottom,
-                            Source = await canvas.Graphics.BitmapAsync(myStream)
-                        });
-                }
+            //    using (var myStream = await canvas.Assets.GetFileFromLocalFolderAsync(fileName))
+            //    {
+            //        canvas.Children.Add(
+            //            new SlimCanvas.View.Controls.Image()
+            //            {
+            //                VerticalAlignment = SlimCanvas.View.Controls.EnumTypes.VerticalAlignment.Bottom,
+            //                Source = await canvas.Graphics.BitmapAsync(myStream)
+            //            });
+            //    }
 
-                using (var myStream = await canvas.Assets.GetFileFromTempAsync(fileName))
-                {
-                    canvas.Children.Add(
-                        new SlimCanvas.View.Controls.Image()
-                        {
-                            VerticalAlignment = SlimCanvas.View.Controls.EnumTypes.VerticalAlignment.Bottom,
-                            HorizontalAlignment = SlimCanvas.View.Controls.EnumTypes.HorizontalAlignment.Right,
-                            Source = await canvas.Graphics.BitmapAsync(myStream)
-                        });
-                }
-            }
+            //    using (var myStream = await canvas.Assets.GetFileFromTempAsync(fileName))
+            //    {
+            //        canvas.Children.Add(
+            //            new SlimCanvas.View.Controls.Image()
+            //            {
+            //                VerticalAlignment = SlimCanvas.View.Controls.EnumTypes.VerticalAlignment.Bottom,
+            //                HorizontalAlignment = SlimCanvas.View.Controls.EnumTypes.HorizontalAlignment.Right,
+            //                Source = await canvas.Graphics.BitmapAsync(myStream)
+            //            });
+            //    }
+            //}
             
             ResizeElement(canvas.Width);
             canvas.SizeChanged += Canvas_SizeChanged;

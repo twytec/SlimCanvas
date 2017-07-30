@@ -32,7 +32,7 @@ namespace TestSamples.Scenarios
                 Thickness = 5,
                 StrokeColor = SlimCanvas.Color.White,
                 StrokeStyle = SlimCanvas.View.Controls.EnumTypes.DashStyle.Dash,
-                FillBrush = SlimCanvas.View.SolidColorBrush.Transparent,
+                FillBrush = new SlimCanvas.View.SolidColorBrush(Color.Transparent),
                 HorizontalAlignment = SlimCanvas.View.Controls.EnumTypes.HorizontalAlignment.Center,
                 VerticalAlignment = SlimCanvas.View.Controls.EnumTypes.VerticalAlignment.Center,
                 Origin = new Vector2(0.5d, 0.5d)
@@ -45,7 +45,7 @@ namespace TestSamples.Scenarios
                 Thickness = 5,
                 StrokeColor = SlimCanvas.Color.White,
                 StrokeStyle = SlimCanvas.View.Controls.EnumTypes.DashStyle.Dash,
-                FillBrush = SlimCanvas.View.SolidColorBrush.Transparent,
+                FillBrush = new SlimCanvas.View.SolidColorBrush(Color.Transparent),
                 HorizontalAlignment = SlimCanvas.View.Controls.EnumTypes.HorizontalAlignment.Center,
                 VerticalAlignment = SlimCanvas.View.Controls.EnumTypes.VerticalAlignment.Center,
                 Origin = new Vector2(0.5d, 0.5d)
