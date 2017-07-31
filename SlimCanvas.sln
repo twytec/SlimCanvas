@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlimCanvas.iOS", "SlimCanva
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlimCanvas.iOS.Test", "SlimCanvas.iOS.Test\SlimCanvas.iOS.Test.csproj", "{6B9B02A2-AF31-42E2-966A-84472A4F2BA2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XF", "XF", "{BE5CBE58-57DB-4282-B94A-A5FAB021F1EC}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		TestSamples\TestSamples.projitems*{38b06a1b-6e94-4169-8b4e-7a1e77269736}*SharedItemsImports = 13
