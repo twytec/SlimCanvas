@@ -12,8 +12,14 @@ using Xamarin.Forms.Platform.UWP;
 [assembly: ExportRenderer(typeof(SlimCanvasXF), typeof(SlimCanvasXFUWP))]
 namespace SlimCanvas.XF.UWP
 {
+    /// <summary>
+    /// Create new Canvas in Xamarin Forms
+    /// </summary>
     public class SlimCanvasXFUWP : ViewRenderer<SlimCanvasXF, SlimCanvasUWP>
     {
+        /// <summary>
+        /// Call befor Forms.Init
+        /// </summary>
         public static void Initialize()
         {
 
@@ -21,6 +27,10 @@ namespace SlimCanvas.XF.UWP
 
         SlimCanvasUWP slim;
 
+        /// <summary>
+        /// to be added
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnElementChanged(ElementChangedEventArgs<SlimCanvasXF> e)
         {
             base.OnElementChanged(e);
