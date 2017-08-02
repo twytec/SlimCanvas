@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>cfc8a070-bbd7-4b62-9bf5-d2a9d6770edf</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SharedPCL</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IAssets.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IBitmap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IGraphics.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\ISlimDraw.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IUserInput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Canvas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Color.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controller\UserInput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IBitmap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Keys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Margin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plattform.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Size.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Vector2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Brush.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Camera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Animation\Animate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Animation\AnimateBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Animation\AnimateInternal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Animation\Fade.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Animation\MoveTo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Animation\Rotate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Animation\Scale.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\BasicElement.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Collections\ChildrenCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Collections\GlobalChildrenList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\EnumTypes\Alignment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\EnumTypes\DashStyle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\EnumTypes\TextEnum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\EventTypes\DrawUpdateEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\EventTypes\PointerRoutedEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\EventTypes\RenderingEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\EventTypes\SizeChangedEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\EventTypes\SuspendingEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Image.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\BasicFillPrimitive.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\BasicPrimitive.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\Ellipse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\GeometryHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\Line.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\Path.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\Propertys\DashPatternProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\Propertys\EndPointProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\Propertys\FillColorProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\Propertys\StartPointProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\Propertys\StrokeColorProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\Propertys\StrokeStyleProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\Propertys\ThicknessProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Primitive\Rectangle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\BackgroundProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\BasicProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\ClipProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\HeightProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\IProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\OpacityProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\OrginProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\ParentProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\RotationProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\ScaleProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\WidthProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\XProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\YProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\Propertys\ZProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\TextBlock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Controls\UIElement.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Draw.cs" />
+  </ItemGroup>
+</Project>
