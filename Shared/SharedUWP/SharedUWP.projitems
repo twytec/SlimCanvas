@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>5974f5c9-ef77-4248-8827-bcf4c06e08ab</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SharedUWP</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IAssetsUwp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IBitmapUwp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IGraphicsUwp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IRenderTargetBitmapUwp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IUserInputUwp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LocalCache.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LocalTransform.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SharedFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SlimCanvasUWP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\DrawInBitmap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\DrawInCanvas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\DXSwapDraw.cs" />
+  </ItemGroup>
+</Project>

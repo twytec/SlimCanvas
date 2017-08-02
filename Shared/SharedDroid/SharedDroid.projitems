@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>69cc9d4d-ee45-471d-924e-54d1fbb0a90f</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SharedDroid</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IAssetsDroid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IBitmapDroid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IGraphicsDroid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IUserInputDroid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LocalTransform.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SlimCanvasDroid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\DrawInBitmap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\DrawInCanvas.cs" />
+  </ItemGroup>
+</Project>
